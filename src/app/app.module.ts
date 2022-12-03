@@ -17,6 +17,9 @@ import {RouterModule, Routes} from '@angular/router';
 import { Navbar2Component } from './navbar2/navbar2.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { Navbar3Component } from './navbar3/navbar3.component';
+import { ViewcourseComponent } from './viewcourse/viewcourse.component';
+import { ViewfriendComponent } from './viewfriend/viewfriend.component';
 const myRoute:Routes=[
   {
     path:"",
@@ -55,7 +58,20 @@ const myRoute:Routes=[
   {
     path:"navbar2",
     component:Navbar2Component
+  },
+  {
+    path:"viewcourse",
+    component:ViewcourseComponent
+  },
+  {
+    path:"viewfriend",
+    component:ViewfriendComponent
+  },
+  {
+    path:"navbar3",
+    component:Navbar3Component
   }
+
 ]
 
 @NgModule({
@@ -71,7 +87,10 @@ const myRoute:Routes=[
     AddcourseComponent,
     AddfriendComponent,
     Navbar1Component,
-    Navbar2Component
+    Navbar2Component,
+    Navbar3Component,
+    ViewcourseComponent,
+    ViewfriendComponent
   ],
   imports: [
     BrowserModule,
