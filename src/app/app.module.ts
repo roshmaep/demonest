@@ -12,6 +12,38 @@ import { EmployeeComponent } from './employee/employee.component';
 import { EmpregComponent } from './empreg/empreg.component';
 import { AddcourseComponent } from './addcourse/addcourse.component';
 import { AddfriendComponent } from './addfriend/addfriend.component';
+import { Navbar1Component } from './navbar1/navbar1.component';
+import {RouterModule, Routes} from '@angular/router';
+const myRoute:Routes=[
+  {
+    path:"",
+    component:HomeComponent
+  },
+  {
+    path:"gallery",
+    component:GalleryComponent
+  },
+  {
+    path:"about",
+    component:AboutComponent
+  },
+  {
+    path:"contact",
+    component:ContactComponent
+  },
+  {
+    path:"employee",
+    component:EmployeeComponent
+  },
+  {
+    path:"reg",
+    component:EmpregComponent
+  },
+  {
+    path:"admin",
+    component:AdminloginComponent
+  }
+]
 
 @NgModule({
   declarations: [
@@ -24,11 +56,13 @@ import { AddfriendComponent } from './addfriend/addfriend.component';
     EmployeeComponent,
     EmpregComponent,
     AddcourseComponent,
-    AddfriendComponent
+    AddfriendComponent,
+    Navbar1Component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(myRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]
