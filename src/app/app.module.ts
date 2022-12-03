@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { EmpregComponent } from './empreg/empreg.component';
+import { AddcourseComponent } from './addcourse/addcourse.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EmpregComponent } from './empreg/empreg.component';
     AboutComponent,
     ContactComponent,
     EmployeeComponent,
-    EmpregComponent
+    EmpregComponent,
+    AddcourseComponent
   ],
   imports: [
     BrowserModule,
