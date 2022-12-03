@@ -1,0 +1,86 @@
+<app-navbar3></app-navbar3>
+<div class="container">
+
+    <div class="row">
+
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <table class="table">
+
+                <thead>
+
+                  <tr>
+
+                    <th scope="col">Cousre Title</th>
+
+                    <th scope="col">Course Description</th>
+
+                    <th scope="col">Course Date</th>
+
+                    <th scope="col">Duration</th>
+                    <th scope="col">Venue</th>
+
+                  </tr>
+
+                </thead>
+
+                <tbody>
+
+                 <ng-container *ngIf="loading; then loadingScreen; else dataScreen"></ng-container>
+                 <ng-template #loadingScreen>
+                  <div class="spinner-grow text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-secondary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-warning" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-info" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-light" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-dark" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                 </ng-template>
+                 <ng-template #dataScreen>
+                  <tr *ngFor="let i of data">
+
+                    <th scope="row">{{i._id}}</th>
+
+                    <td>{{i.courseTitle}}</td>
+
+                    <td>{{i.courseDescription}}</td>
+
+                    <td>{{i.courseDuration}}</td>
+
+                    <td>{{i.courseDate}}</td>
+
+                    <td>{{i.courseVenue}}</td>
+                    
+
+
+                   
+
+                  </tr>
+                 </ng-template>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+    
+

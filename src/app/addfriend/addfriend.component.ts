@@ -18,6 +18,16 @@ constructor(private api:ApiService){}
    this.api.addfriend(data).subscribe(
     (response:any)=>{
       console.log(response)
+      if (response.status=="success") {
+        alert("friends added successfully")
+       this.name=""
+       this.fname=""
+        this.dfriend=""
+        this.fnickname=""
+      } else {
+        alert("something went wrong")
+        
+      }
     }
    )
 }
