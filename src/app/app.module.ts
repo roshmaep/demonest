@@ -16,6 +16,7 @@ import { Navbar1Component } from './navbar1/navbar1.component';
 import {RouterModule, Routes} from '@angular/router';
 import { Navbar2Component } from './navbar2/navbar2.component';
 import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 const myRoute:Routes=[
   {
     path:"",
@@ -76,7 +77,8 @@ const myRoute:Routes=[
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(myRoute),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
