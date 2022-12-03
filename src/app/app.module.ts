@@ -14,6 +14,8 @@ import { AddcourseComponent } from './addcourse/addcourse.component';
 import { AddfriendComponent } from './addfriend/addfriend.component';
 import { Navbar1Component } from './navbar1/navbar1.component';
 import {RouterModule, Routes} from '@angular/router';
+import { Navbar2Component } from './navbar2/navbar2.component';
+import { FormsModule } from '@angular/forms';
 const myRoute:Routes=[
   {
     path:"",
@@ -42,6 +44,16 @@ const myRoute:Routes=[
   {
     path:"admin",
     component:AdminloginComponent
+  },{
+    path:"addcourse",
+    component:AddcourseComponent
+  },{
+    path:"addfriend",
+    component:AddfriendComponent
+  },
+  {
+    path:"navbar2",
+    component:Navbar2Component
   }
 ]
 
@@ -57,12 +69,14 @@ const myRoute:Routes=[
     EmpregComponent,
     AddcourseComponent,
     AddfriendComponent,
-    Navbar1Component
+    Navbar1Component,
+    Navbar2Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(myRoute)
+    RouterModule.forRoot(myRoute),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
